@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Pixiv Exifチェッカー</title>
+  <script src="https://unpkg.com/exifr/dist/lite.umd.js"></script>
+  <script defer src="script.js"></script>
+  <style>
+    body { font-family: serif; padding: 2em; background: #f5f5f5; }
+    input, button { padding: 0.5em; font-size: 1em; margin: 0.2em 0; }
+    #results { margin-top: 1em; white-space: pre-wrap; }
+    img.thumb { max-height: 100px; margin-right: 10px; vertical-align: middle; }
+  </style>
+</head>
+<body>
+  <h1>Pixiv投稿の画像を一括Exifチェックいたしますわ</h1>
+  <input type="text" id="pixiv-url" placeholder="Pixivの投稿URLをどうぞ" size="70">
+  <button onclick="handlePixiv()">チェックする</button>
+  <div id="results"></div>
+</body>
+</html>
